@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+:root {
+    --primary-brownish: rgba(87, 89, 76, 1);
+    --primary-green: rgba(26, 39, 34, 1);
+    --primary-gray: rgba(21, 24, 22, 1);
+    --primary-lightgray: rgba(57, 69, 68, 1);
+    --black: rgba(3, 4, 2, 1);
+
+    --dark-green: rgba(3, 8, 2, 1);
+    --high-alpha-navbar: rgba(3, 8, 2, 0.9);
+    --low-alpha-navbar: rgba(2, 8, 2, 0);
+    --navbar-gradient: linear-gradient(to bottom, var(--high-alpha-navbar) 10%, var(--low-alpha-navbar) 30%);
+    --light-gray: #898572ff;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    min-height: 100vh;
+    background:var(--dark-green);
+    font-family:'Times New Roman', Times, serif;
+}
+
+#content {
+    position: relative;
+    /* min-height: 100vh; */
+    height: 85vh;
+    width: 100vw;
+    background: url('./assets/hero-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--navbar-gradient);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    position: relative;
+    color: var(--light-gray);
+    z-index: 2;
+    font-size: 1.15rem;
+    backdrop-filter: blur(2px);
+}
+
+.restaurant-name {
+    font-size: 3rem;
+    font-style: italic;
+    font-family: 'Allura', cursive;
+}
