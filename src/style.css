@@ -6,11 +6,14 @@
     --primary-gray: rgba(21, 24, 22, 1);
     --primary-lightgray: rgba(57, 69, 68, 1);
     --black: rgba(3, 4, 2, 1);
+    --light-blue: rgba(211, 230, 234, 1);
+    --light-brown: rgba(185, 150, 85, 1);
 
     --dark-green: rgba(3, 8, 2, 1);
-    --high-alpha-navbar: rgba(3, 8, 2, 0.9);
+    --high-alpha-navbar: rgba(3, 8, 2, 1);
     --low-alpha-navbar: rgba(2, 8, 2, 0);
-    --navbar-gradient: linear-gradient(to bottom, var(--high-alpha-navbar) 10%, var(--low-alpha-navbar) 30%);
+    --navbar-gradient: linear-gradient(to bottom, var(--high-alpha-navbar) 10%, var(--low-alpha-navbar) 25%);
+    --name-gradient: radial-gradient(var(--high-alpha-navbar) 0%, var(--low-alpha-navbar) 100%);
     --light-gray: #898572ff;
 }
 
@@ -61,7 +64,78 @@ body {
 }
 
 .restaurant-name {
+    position: relative;
     font-size: 3rem;
     font-style: italic;
     font-family: 'Allura', cursive;
+}
+
+.restaurant-name::after {
+    content: "";
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    left: -25px;
+    bottom: -25px;
+    background: var(--name-gradient);
+    z-index:-1;
+}
+
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    position: absolute;
+    gap: 1rem;
+    bottom: -5rem;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: var(--light-gray);
+    font-style: italic;
+    font-size: .9rem;
+    background: var(--primary-gray);
+    padding: 1rem;
+    width: clamp(400px, 70vw, 800px);
+    height: 10rem;
+    border: 1px solid var(--light-gray);
+}
+
+.info-section div:nth-of-type(2) {
+    padding: 0 1rem;
+    border-left: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    color: var(--light-blue);
+    text-align: center;
+    padding: 1rem 3rem;
+    gap: 3rem;
+    z-index: 5;
+    font-size: 2.5rem;
+    background:rgba(0, 0, 0, .5);
+    backdrop-filter: blur(2px);
+    font-weight: 500;
+}
+
+.logo {
+    font-family: 'Allura', cursive;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .info-section {
+        font-size: .85rem;
+        bottom: -7rem;
+        height: 14rem;
+    }
 }
