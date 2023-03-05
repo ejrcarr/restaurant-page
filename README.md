@@ -31,3 +31,11 @@ The menu page displays a list of appetizers, entrees, desserts, beverages, and s
 
 ### Contact Us Page
 The contact us page provides information on the restaurant's address, phone number, email, hours of operation, and reservation options. The page also features a contact form for customers to send feedback or inquiries.
+
+## Image Credits
+<ul>
+<li>Hero Image: <a href="https://unsplash.com/photos/MhOoD_h90ks">Joanna Boj on Upslash</a></li>
+<li>Pan Seared Duck Image: <a href="https://unsplash.com/photos/eHViWPrwMkE">Emma Houghton on Upslash</a></li>
+<li>Sea Bass Image: <a href="https://unsplash.com/photos/jMwvJ5aj5eA">Patrick Browne on Upslash</a></li>
+<li>Contact Image: <a href="https://unsplash.com/photos/CAhjZmVk5H4">Alex Haney on Upslash</a></li>
+</ul>
