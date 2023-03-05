@@ -14,6 +14,7 @@
     --dark-green: rgba(3, 8, 2, 1);
     --low-alpha-green: rgba(3, 8, 2, .7);
     --high-alpha-navbar: rgba(3, 8, 2, 1);
+    --mid-alpha-navbar: rgba(3, 8, 2, .75);
     --low-alpha-navbar: rgba(2, 8, 2, 0);
     --navbar-gradient: linear-gradient(to bottom, var(--high-alpha-navbar) 0%, var(--low-alpha-navbar) 35%);
     --name-gradient: radial-gradient(var(--high-alpha-navbar) 0%, var(--low-alpha-navbar) 100%);
