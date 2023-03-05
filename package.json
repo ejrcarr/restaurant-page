@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/ejrcarr/restaurant-page#readme",
   "devDependencies": {
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
