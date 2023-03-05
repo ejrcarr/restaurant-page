@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
 
 :root {
     --primary-brownish: rgba(87, 89, 76, 1);
     --primary-green: rgba(26, 39, 34, 1);
     --primary-gray: rgba(21, 24, 22, 1);
+    --primary-darkgray:rgb(16, 18, 17);
     --primary-lightgray: rgba(57, 69, 68, 1);
     --black: rgba(3, 4, 2, 1);
     --light-blue: rgba(211, 230, 234, 1);
     --light-brown: rgba(185, 150, 85, 1);
 
     --dark-green: rgba(3, 8, 2, 1);
+    --low-alpha-green: rgba(3, 8, 2, .7);
     --high-alpha-navbar: rgba(3, 8, 2, 1);
     --low-alpha-navbar: rgba(2, 8, 2, 0);
-    --navbar-gradient: linear-gradient(to bottom, var(--high-alpha-navbar) 10%, var(--low-alpha-navbar) 25%);
+    --navbar-gradient: linear-gradient(to bottom, var(--high-alpha-navbar) 0%, var(--low-alpha-navbar) 35%);
     --name-gradient: radial-gradient(var(--high-alpha-navbar) 0%, var(--low-alpha-navbar) 100%);
     --light-gray: #898572ff;
+    --lighter-gray: rgb(181, 176, 150);
 }
 
 *, *::before, *::after {
@@ -24,24 +28,24 @@
     font-family: inherit;
 }
 
+html { scroll-behavior: smooth; }
+
 body {
     min-height: 100vh;
     background:var(--dark-green);
     font-family:'Times New Roman', Times, serif;
 }
 
-#content {
+.hero-section {
     position: relative;
-    /* min-height: 100vh; */
     height: 85vh;
     width: 100vw;
-    background: url('./assets/hero-background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#content::after {
+.hero-section::after {
     content: '';
     position: absolute;
     top: 0;
@@ -49,6 +53,19 @@ body {
     right: 0;
     bottom: 0;
     background: var(--navbar-gradient);
+    z-index: 1;
+}
+
+.navbar button {
+    background: none;
+    color: var(--light-gray);
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    color: var(--lighter-gray);
 }
 
 .navbar {
@@ -56,29 +73,24 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 5%;
-    position: relative;
+    position: fixed;
     color: var(--light-gray);
     z-index: 2;
     font-size: 1.15rem;
     backdrop-filter: blur(2px);
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all 200ms ease-in-out;
 }
 
-.restaurant-name {
+.restaurant-name #main-button{
     position: relative;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-style: italic;
     font-family: 'Allura', cursive;
-}
-
-.restaurant-name::after {
-    content: "";
-    position: absolute;
-    top: -25px;
-    right: -25px;
-    left: -25px;
-    bottom: -25px;
-    background: var(--name-gradient);
-    z-index:-1;
+    transition: all 200ms ease-in-out;
 }
 
 .info-section {
@@ -108,31 +120,149 @@ body {
     border-right: 1px solid var(--light-gray);
 }
 
-.hero-text {
+.hero-text-container {
+    display: grid;
+    gap: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 10;
+    width: clamp(300px, 70vw, 700px);
+}
+
+.hero-text {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     color: var(--light-blue);
     text-align: center;
     padding: 1rem 3rem;
-    gap: 3rem;
+    gap: 1rem;
     z-index: 5;
-    font-size: 2.5rem;
+    font-size: 3.25rem;
     background:rgba(0, 0, 0, .5);
     backdrop-filter: blur(2px);
     font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+}
+
+#order-button {
+    position: relative;
+    background: radial-gradient(var(--dark-green) 0%, var(--primary-green) 100%);
+    color: var(--light-blue);
+    width: fit-content;
+    padding: .75rem 1.25rem;
+    justify-self: center;
+    font-size: 1.25rem;
+    border: 1px solid var(--light-blue);
+    cursor: pointer;
+    z-index: 10;
+}
+
+#order-button:hover {
+    background: var(--dark-green);
 }
 
 .logo {
     font-family: 'Allura', cursive;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 600;
 }
 
+.more-section {
+    display: grid;
+    gap: 2rem;
+    padding: 0 8%;
+    max-width: 135ch; 
+    margin: 3rem auto;
+    margin-top: 10rem;
+    color: var(--light-gray);
+}
+
+h2 {
+    position: relative;
+    font-size: 2rem;
+    padding: 0 1.5rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    background: var(--light-gray);
+    width: 5px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+p {
+    line-height: 1.75rem;
+    font-size: 1.075rem;
+}
+
+.plate {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.plate:nth-child(even) {
+    flex-direction: row-reverse;
+} 
+
+.plate p {
+    flex: 1 1 50%;
+}
+
+.plate img {
+    width: clamp(300px, 40%, 350px);
+    border: .25rem solid var(--light-gray);
+}
+
+.quotation-section {
+    display: grid;
+    gap: 2rem;
+    padding: 3rem 8%;
+    max-width: 135ch; 
+    margin: 0 auto;
+    background: var(--primary-gray);
+    color: var(--light-gray);
+    margin-bottom: 5rem;
+}
+
+.quotation-section span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: block;
+    text-align: end;
+}
+
+.nav-active {
+    transition: all 200ms ease-in-out;
+    transition: background 100ms ease-in-out;
+    background: var(--low-alpha-green);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid var(--dark-green);
+}
+
+.nav-active .restaurant-name #main-button {
+    transition: all 200ms ease-in-out;
+    font-size: 2rem;
+}
+
 @media screen and (max-width: 800px) {
+    .restaurant-name #main-button {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
     .info-section {
         font-size: .85rem;
         bottom: -7rem;
