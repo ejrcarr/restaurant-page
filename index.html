@@ -4,42 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="main.js"></script>
-    <link rel="stylesheet" href="../src/style.css">
+    <script defer type="module" src="main.js"></script>
+    <!-- <link rel="stylesheet" href="../style.css"> -->
     <title>Restaurant Page</title>
 </head>
 <body>
-    <div id="content">
-        <div class="navbar">
-            <div class="menu-link">
-                Menu
-            </div>
-            <div class="restaurant-name">
-                Savoré Bistro
-            </div>
-            <div class="contact-us-link">
-                Contact Us
-            </div>
+    <div class="navbar" id="navbar">
+        <div class="menu-link">
+            <button type="button" id="menu-button">Menu</button>
         </div>
-        <div class="hero-text">
-            <div class="logo">
-                SB
-            </div>
-            <div class="text">
-                Experience the art of culinary fusion
-            </div>
+        <div class="restaurant-name">
+            <button type="button" id="main-button">Savoré Bistro</button>
         </div>
-        <div class="info-section">
-            <div class="fact-one">
-                Savoré Bistro specializes in modern, fusion cuisine that combines global flavors with local ingredients to create unique, innovative dishes.
-            </div>
-            <div class="fact-two">
-                Savoré Bistro's menu changes regularly to showcase seasonal ingredients and keep the dining experience fresh and exciting for customers.
-            </div>
-            <div class="fact-three">
-                Savoré Bistro is committed to using sustainable, organic, and locally sourced ingredients whenever possible, in order to support the local community and promote eco-friendly practices.
-            </div>
+        <div class="contact-us-link">
+            <button type="button" id="contact-button">Contact Us</button>
         </div>
     </div>
+    <div id="content"></div>
 </body>
 </html>
