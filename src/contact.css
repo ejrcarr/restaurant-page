@@ -1,0 +1,67 @@
+.contact-page-container {
+    min-height: 100vh;
+}
+
+.contact-hero-container {
+    display: grid;
+    place-content: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+}
+
+.contact-hero-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to bottom, var(--mid-alpha-navbar) 0%, var(--low-alpha-navbar) 150%);
+}
+
+.contact-hero-title {
+    position: relative;
+    font-size: 3.25rem;
+    font-weight: 800;
+    color: var(--light-blue);
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(2px);
+    padding: 1rem 2rem;
+    z-index: 4;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 3rem 8%;
+    color: var(--light-gray);
+}
+
+.contact-info h2 {
+    margin: 1rem 0;
+}
+
+.contact-info p {
+    margin: .5rem 0;
+}
+
+.contact-info ul {
+    padding-left: 2rem;
+}
+
+.contact-info li {
+    line-height: 1.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .contact-hero-title {
+        font-size: 2rem;
+    }
+}
