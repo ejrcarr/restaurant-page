@@ -75,7 +75,6 @@ function contactSectionWrapper(title, descriptionHTML) {
 	const infoWrapper = document.createElement('div');
 	infoWrapper.appendChild(title);
 	infoWrapper.innerHTML += descriptionHTML;
-	console.log(infoWrapper.innerHTML);
 	return infoWrapper;
 }
 
