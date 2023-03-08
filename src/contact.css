@@ -37,11 +37,17 @@
 }
 
 .contact-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax()); */
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     padding: 3rem 8%;
     color: var(--light-gray);
+}
+
+.contact-info div {
+    flex: 1 1 300px;
 }
 
 .contact-info h2 {
