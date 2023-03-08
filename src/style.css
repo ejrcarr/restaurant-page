@@ -265,8 +265,15 @@ p {
     }
 
     .info-section {
-        font-size: .85rem;
-        bottom: -7rem;
-        height: 14rem;
+        display: none;
+    }
+
+    .more-section {
+        margin-top: 3rem;
+    }
+
+    .hero-section {
+        height: 75vh;
+        width: 100vw;
     }
 }
