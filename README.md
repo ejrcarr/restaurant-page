@@ -6,6 +6,12 @@ Savoré Bistro is a responsive restaurant website built with HTML, CSS, and vani
 
 The purpose of this project is to practice and get familiar with ES6 modules and Webpack, as well as to showcase a simple yet elegant website design for a fictional restaurant.
 
+## UI Demonstration
+
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/110308975/225449213-0e190f0f-8a46-42f6-b5b9-0137b07a1e44.gif'/>
+</p>
+
 ## Learned Technologies
 <ul>
   <li>HTML5</li>
@@ -21,12 +27,6 @@ The purpose of this project is to practice and get familiar with ES6 modules and
 <li>Dynamic HTML generation for efficient loading and content flexibility</li>
 <li>Using Immediately Invoked Function Expression to prevent pollution of the global JS scope and organize code</li>
 </ul>
-
-## UI Demonstration
-
-<p align='center'>
-  <img src='https://user-images.githubusercontent.com/110308975/225449213-0e190f0f-8a46-42f6-b5b9-0137b07a1e44.gif'/>
-</p>
 
 ## Sections
 ### Homepage
