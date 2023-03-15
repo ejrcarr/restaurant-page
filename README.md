@@ -22,6 +22,12 @@ The purpose of this project is to practice and get familiar with ES6 modules and
 <li>Using Immediately Invoked Function Expression to prevent pollution of the global JS scope and organize code</li>
 </ul>
 
+## UI Demonstration
+
+<p align='center'>
+  <img src='https://user-images.githubusercontent.com/110308975/225449213-0e190f0f-8a46-42f6-b5b9-0137b07a1e44.gif'/>
+</p>
+
 ## Sections
 ### Homepage
 The homepage features a hero image with a call-to-action button, as well as a section showcasing the restaurant's signature dishes and customer testimonials.
